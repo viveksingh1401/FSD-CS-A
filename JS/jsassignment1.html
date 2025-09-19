@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title >Counter App</title>
+  <style>
+    
+    title{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: antiquewhite;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+    ;
+      padding: 10px;
+      background: #f0f0f0;
+      text-align: "center";
+    }
+
+    .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;   
+  object-fit: cover;    
+  margin-right: 10px;
+}
+
+
+    h1 {
+      margin: 0;
+    }
+
+    .counter {
+      margin-top: 50px;
+      font-size: 2rem;
+    }
+
+    #message {
+      color:aqua;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 50px;
+      border: none;
+      background: #007BFF;
+      color: rgb(255, 255, 255);
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body >
+  <header>
+  <img src="wallpaper.jpg" class="logo" alt="App Logo">
+
+    <h1>Counter App</h1>
+  </header>
+
+  <div class="counter">
+    <p id="count">0</p>
+    <p id="message"></p>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById("count");
+    const message = document.getElementById("message");
+
+    function increment() {
+      if (count < 10) {
+        count++;
+        updateDisplay();
+      } else {
+        message.innerText = "Max limit reached";
+      }
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        updateDisplay();
+      } else {
+        message.innerText = "Min limit reached";
+      }
+    }
+
+    function updateDisplay() {
+      countDisplay.innerText = count;
+      message.innerText = "";
+    }
+  </script>
+</body>
+</html>
