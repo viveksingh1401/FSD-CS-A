@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["App.css"],"sourcesContent":[".card{\r\n    width: 400px;\r\n    height: 400px;\r\n    background-color: aqua;\r\n    border-radius: 10px;\r\n    padding: 25px;\r\n    margin: 10px;   \r\n}"],"names":[],"version":3,"file":"BOOK_NPM-APP.aa436662.css.map","sourceRoot":"/__parcel_source_root/"}
