@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #box1 {
+      width: 50%;
+      background-color: rgb(216, 207, 207);
+      float: left;
+      height: 900px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #box2 {
+      width: 50%;
+      background-color: rgb(102, 100, 100);
+      float: right;
+      height: 900px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    input {
+      width: 80%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+      background-color: #444;
+      color: rgb(29, 6, 6);
+      border: none;
+      border-radius: 5px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">
+    <h2>Resume Preview</h2>
+    <div id="resumeOutput">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100px;height:100px;border-radius:50%;">
+      <p><strong>Name:</strong> </p>
+      <p><strong>Class:</strong> </p>
+      <p><strong>Programming Skill:</strong> </p>
+    </div>
+  </div>
+   
+  <div id="box2">
+    <h2>Enter Details</h2>
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    
+    <label>Class:</label><br>
+    <input type="text" id="class" placeholder="Enter your class"><br>
+    
+    <label>Programming Skill:</label><br>
+    <input type="text" id="skill" placeholder="Enter your skills"><br>
+    
+    <button onclick="resume()">Submit</button>
+  </div>
+
+  <script>
+    function resume() {
+      let name = document.getElementById("name").value;
+      let cls = document.getElementById("class").value;
+      let skill = document.getElementById("skill").value;
+
+      document.getElementById("resumeOutput").innerHTML = 
+      `<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100px;height:100px;border-radius:50%;">
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Class:</strong> ${cls}</p>
+        <p><strong>Programming Skill:</strong> ${skill}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
